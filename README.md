@@ -7,7 +7,10 @@ This repo uses Python & C# Components to implement algorithms in computational g
  - Using `ToLeft` test to determine if 2 lines interesect in a plane(or space, same algorithm)
 
 Grasshopper Python Implementation Sample:
-![alt text](https://raw.githubusercontent.com/LeoYuanjieLi/Computational_Geography/master/Graham_Scan_Algorithm/Graham-Scan-Image.JPG)
+![alt text](https://github.com/LeoYuanjieLi/Computational_Geography/blob/master/TwoLineIntersect/case-1.JPG)
+![alt text](https://github.com/LeoYuanjieLi/Computational_Geography/blob/master/TwoLineIntersect/case-2.JPG)
+![alt text](https://github.com/LeoYuanjieLi/Computational_Geography/blob/master/TwoLineIntersect/case-3.JPG)
+
 
 ## Convex Hull
 
@@ -37,6 +40,4 @@ Let points[0..n-1] be the input array.
 5) Print contents of S
 
 Grasshopper Python Implementation Sample:
-![alt text](https://github.com/LeoYuanjieLi/Computational_Geography/blob/master/TwoLineIntersect/case-1.JPG)
-![alt text](https://github.com/LeoYuanjieLi/Computational_Geography/blob/master/TwoLineIntersect/case-2.JPG)
-![alt text](https://github.com/LeoYuanjieLi/Computational_Geography/blob/master/TwoLineIntersect/case-3.JPG)
+![alt text](https://raw.githubusercontent.com/LeoYuanjieLi/Computational_Geography/master/Graham_Scan_Algorithm/Graham-Scan-Image.JPG)
