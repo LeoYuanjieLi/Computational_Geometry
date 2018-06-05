@@ -2,6 +2,15 @@
 
 This repo uses Python & C# Components to implement algorithms in computational geography
 
+## 2 Line Intersect
+
+ - Using `ToLeft` test to determine if 2 lines interesect in a plane(or space, same algorithm)
+ 
+Grasshopper Python Implementation Sample:
+![alt text](https://raw.githubusercontent.com/LeoYuanjieLi/Computational_Geography/master/Graham_Scan_Algorithm/Graham-Scan-Image.JPG)
+
+## Convex Hull
+
 ### Graham Scan Algorithm
 
 - Basic idea (A brief illustration on GeeksforGeeks https://www.geeksforgeeks.org/convex-hull-set-2-graham-scan/): 
