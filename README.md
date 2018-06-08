@@ -41,3 +41,12 @@ Let points[0..n-1] be the input array.
 
 Grasshopper Python Implementation Sample:
 ![alt text](https://raw.githubusercontent.com/LeoYuanjieLi/Computational_Geography/master/Graham_Scan_Algorithm/Graham-Scan-Image.JPG)
+
+
+
+## Water Runoff Similation
+
+Recursively find the next point on the surface and then connect all points on a single stream.
+
+- Sample in Grasshopper(Time Complexity: UpperBound O(n**2)):
+![alt text](https://raw.githubusercontent.com/LeoYuanjieLi/Computational_Geography/master/WaterRunOff/img-1.JPG)
