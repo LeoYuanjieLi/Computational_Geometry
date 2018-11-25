@@ -50,3 +50,7 @@ Recursively find the next point on the surface and then connect all points on a 
 
 - Sample in Grasshopper(Time Complexity: UpperBound O(n**2)):
 ![alt text](https://raw.githubusercontent.com/LeoYuanjieLi/Computational_Geography/master/WaterRunOff/img-1.JPG)
+
+## TODO
+
+## Line Segment Intersection
