@@ -51,6 +51,67 @@ Recursively find the next point on the surface and then connect all points on a 
 - Sample in Grasshopper(Time Complexity: UpperBound O(n**2)):
 ![alt text](https://raw.githubusercontent.com/LeoYuanjieLi/Computational_Geography/master/WaterRunOff/img-1.JPG)
 
+## Interval Intersection
+
+#### Problem: Given an array of intervals(integer), find the union of the intersections
+
+#### Approach:
+
+1. Sort the array in the increasing order on starts of the intervals, and if two intervals share the same starts, sort 
+by the ends. We assume there are no duplicates.
+
+2. Loop through every interval, if the interval's start is less than the previous interval's end, these two intervals
+ have an intersect. We push it to a `temp` array.
+ 
+3. The final step is to combine those `intersects` who intersects with other intersects. Good news is they are sorted
+ so we can loop it once.
+ 
+Time complexity: `n*log(n)` from sorting.
+
+#### Implementation (Python)
+```python
+INTERVALS = [[0, 2],
+             [1, 4],
+             [2, 3],
+             [5, 7],
+             [5, 11],
+             [6, 15],
+             [6, 8],
+             [2, 12],
+             [13, 19]]
+
+def cal_intersects(intervals):
+    """
+
+    Parameters
+    ----------
+    intervals: list of list
+    e.g. [[0, 2], [1, 4], [2, 3]] n by 2
+    Returns
+    -------
+    res: list of list
+    e.g. [[0, 2], [1, 4], [2, 3]] n by 2
+    """
+    sorted_intervals = sorted(intervals)
+
+
+    temp = []
+    for i in range(1, len(sorted_intervals)):
+        if sorted_intervals[i][0] < sorted_intervals[i-1][1]:
+            if (sorted_intervals[i][0], min(sorted_intervals[i-1][1], sorted_intervals[i][1])) not in temp:
+                temp.append((sorted_intervals[i][0], min(sorted_intervals[i-1][1], sorted_intervals[i][1])))
+
+    res = []
+    for begin, end in temp:
+        if res and res[-1][1] >= begin:
+            res[-1][1] = max(res[-1][1], end)
+        else:
+            res.append([begin, end])
+
+    return res
+```
+
+
 ## TODO
 
 ## Line Segment Intersection

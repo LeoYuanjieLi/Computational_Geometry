@@ -10,6 +10,17 @@ INTERVALS = [[0, 2],
 
 import numpy as np
 def cal_intersects(intervals):
+    """
+
+    Parameters
+    ----------
+    intervals: list of list
+    e.g. [[0, 2], [1, 4], [2, 3]] n by 2
+    Returns
+    -------
+    res: list of list
+    e.g. [[0, 2], [1, 4], [2, 3]] n by 2
+    """
     sorted_intervals = np.array(sorted(intervals))
 
 
