@@ -11,21 +11,23 @@ INTERVALS = [[0, 2],
 import numpy as np
 def cal_intersects(intervals):
     sorted_intervals = np.array(sorted(intervals))
-    print(sorted_intervals)
-    # lefts = [("l", interval) for interval in sorted_intervals[..., 0]]
-    # rights = [("r", interval) for interval in sorted_intervals[..., 1]]
-    # print(lefts)
-    # print(rights)
-    res = []
+
+
+    temp = []
     for i in range(1, len(sorted_intervals)):
         if sorted_intervals[i][0] < sorted_intervals[i-1][1]:
-            if (sorted_intervals[i][0], min(sorted_intervals[i-1][1], sorted_intervals[i][1])) not in res:
-                res.append((sorted_intervals[i][0], min(sorted_intervals[i-1][1], sorted_intervals[i][1])))
-    print(res)
+            if (sorted_intervals[i][0], min(sorted_intervals[i-1][1], sorted_intervals[i][1])) not in temp:
+                temp.append((sorted_intervals[i][0], min(sorted_intervals[i-1][1], sorted_intervals[i][1])))
+
+    res = []
+    for begin, end in temp:
+        if res and res[-1][1] >= begin:
+            res[-1][1] = max(res[-1][1], end)
+        else:
+            res.append([begin, end])
+
     return res
 
-
-
-
-
 cal_intersects(INTERVALS)
+
+
