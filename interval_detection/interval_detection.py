@@ -39,6 +39,6 @@ def cal_intersects(intervals):
 
     return res
 
-cal_intersects(INTERVALS)
+print(cal_intersects(INTERVALS))
 
 

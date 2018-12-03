@@ -1,5 +1,5 @@
 class TreeNode:
-    def __init__(self,key,val,left=None,right=None,parent=None):
+    def __init__(self, key, val, left=None, right=None, parent=None):
         self.key = key
         self.payload = val
         self.leftChild = left
@@ -30,7 +30,7 @@ class TreeNode:
     def hasBothChildren(self):
         return self.rightChild and self.leftChild
 
-    def replaceNodeData(self,key,value,lc,rc):
+    def replaceNodeData(self, key, value, lc, rc):
         self.key = key
         self.payload = value
         self.leftChild = lc

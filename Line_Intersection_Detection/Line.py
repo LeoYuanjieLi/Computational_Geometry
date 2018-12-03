@@ -14,6 +14,7 @@ class Line(object):
     def __str__(self):
         return self.name
 
+
 pointA = (-2, 2)
 pointB = (1, 3)
 
